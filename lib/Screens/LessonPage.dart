@@ -45,15 +45,12 @@ class _LessonPageState extends State<LessonPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Flashcard
                   SizedBox(
                     width: size.width * 0.9,
                     height: size.height * 0.3,
                     child: Flashcard(word: words[index]),
                   ),
                   const SizedBox(height: 20),
-
-                  // Next button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -68,13 +65,11 @@ class _LessonPageState extends State<LessonPage> {
                     ),
                   ),
                   const SizedBox(height: 20),
-
-                  // Speak English word
                   IconButton(
                     iconSize: size.width * 0.1,
                     icon: const Icon(Icons.volume_up),
                     onPressed: () async {
-                      await tts.setLanguage("en-US"); // English
+                      await tts.setLanguage("en-US"); 
                       await tts.setPitch(1.2);
                       await tts.setSpeechRate(0.5);
                       await tts.setVolume(1);
@@ -84,11 +79,9 @@ class _LessonPageState extends State<LessonPage> {
                   ),
 
                   const SizedBox(height: 20),
-
-                  // Speak Translation
                   ElevatedButton(
                     onPressed: () async {
-                      await tts.setLanguage("ur-PK"); // Urdu (Pakistan)
+                      await tts.setLanguage("ur-PK"); 
                       await tts.setPitch(1.2);
                       await tts.setSpeechRate(0.5);
                       await tts.setVolume(1);
@@ -114,5 +107,6 @@ class _LessonPageState extends State<LessonPage> {
         ),
       ),
     );
+  
   }
 }
