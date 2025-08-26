@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:language_learning_app/DataLayer/grammer_lesson_data.dart';
 import 'package:language_learning_app/Screens/GrammerLearning/grammer_lesson_page.dart';
 import 'package:language_learning_app/Screens/GrammerLearning/sub_lesson_page.dart';
-import 'package:language_learning_app/Screens/LessonPage.dart';
 
 class GrammarDetailPage extends StatelessWidget {
   final String category;

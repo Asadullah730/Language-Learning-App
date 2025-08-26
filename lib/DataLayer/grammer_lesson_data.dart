@@ -91,6 +91,58 @@ final Map<String, Map<String, dynamic>> lessons = {
           "explanation":
               "A noun is the name of a person, place, thing, or idea.",
           "examples": ["Ali is my friend.", "The book is on the table."],
+          "types": {
+            {
+              "type": "Common Noun",
+              "example": "boy, city, book",
+              "explanation": "Names general items, people, or places.",
+            },
+            {
+              "type": "Proper Noun",
+              "example": "Ali, Karachi, Eiffel Tower",
+              "explanation":
+                  "Names a specific person, place, or thing. Always capitalized.",
+            },
+            {
+              "type": "Concrete Noun",
+              "example": "apple, car, music",
+              "explanation":
+                  "Names something you can see, touch, hear, smell, or taste.",
+            },
+            {
+              "type": "Abstract Noun",
+              "example": "love, freedom, happiness",
+              "explanation":
+                  "Names ideas, qualities, or feelings you cannot touch.",
+            },
+            {
+              "type": "Collective Noun",
+              "example": "team, family, flock",
+              "explanation": "Names a group of people, animals, or things.",
+            },
+            {
+              "type": "Countable Noun",
+              "example": "book/books, apple/apples, chair/chairs",
+              "explanation":
+                  "Nouns that can be counted and have singular/plural forms.",
+            },
+            {
+              "type": "Uncountable Noun",
+              "example": "water, sugar, air",
+              "explanation":
+                  "Nouns that cannot be counted individually; usually singular.",
+            },
+            {
+              "type": "Compound Noun",
+              "example": "toothpaste, mother-in-law, bus stop",
+              "explanation": "Nouns made by combining two or more words.",
+            },
+            {
+              "type": "Possessive Noun",
+              "example": "Ali's book, dog's bone, children's toys",
+              "explanation": "Shows ownership or possession.",
+            },
+          },
         },
         "Pronoun": {
           "explanation": "A pronoun replaces a noun to avoid repetition.",

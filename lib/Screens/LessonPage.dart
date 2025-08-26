@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:language_learning_app/DataLayer/LearningWords.dart';
 import 'package:language_learning_app/Model/word.dart';
+import 'package:language_learning_app/Screens/speeh_page.dart';
 import 'package:language_learning_app/widgets/flashCard.dart';
 
 class LessonPage extends StatefulWidget {
@@ -12,6 +13,7 @@ class LessonPage extends StatefulWidget {
 class _LessonPageState extends State<LessonPage> {
   int index = 0;
   final FlutterTts tts = FlutterTts();
+  final TextEditingController speak_controller = TextEditingController();
 
   void _nextCard() {
     setState(() {
@@ -59,7 +61,7 @@ class _LessonPageState extends State<LessonPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: () async {
                       await tts.setLanguage("en-US");
@@ -82,7 +84,7 @@ class _LessonPageState extends State<LessonPage> {
                     ),
                   ),
 
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: () async {
                       await tts.setLanguage("ur-PK");
@@ -103,6 +105,18 @@ class _LessonPageState extends State<LessonPage> {
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(height: 5),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SpeechSearchField(),
+                        ),
+                      );
+                    },
+                    child: Text("Press for Speech to Text"),
                   ),
                 ],
               ),
