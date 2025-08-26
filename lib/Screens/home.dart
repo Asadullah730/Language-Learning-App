@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/Screens/GrammerLearning/grammer_page.dart';
 import 'package:language_learning_app/Screens/LessonPage.dart';
 import 'package:language_learning_app/Screens/quizpage.dart';
 
@@ -8,7 +9,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Language Learning App")),
+      appBar: AppBar(
+        title: const Text("Language Learning App"),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+      ),
       body: GridView.builder(
         padding: const EdgeInsets.all(16),
         itemCount: categories.length,
@@ -26,7 +31,10 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (_) => LessonPage()),
                 );
               } else if (categories[index] == "Grammar") {
-                // Future page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => GrammarPage()),
+                );
               } else {
                 Navigator.push(
                   context,
